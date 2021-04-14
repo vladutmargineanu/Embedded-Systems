@@ -1,0 +1,7 @@
+Solution
+-run 'chmod +x *.sh' to make the scripts executable
+
+Testing
+-run 'sudo ./disable.sh' on target disable the trigger
+-running 'sudo ./on.sh' on target turns the led on
+-running 'sudo ./off.sh' on terget turns the led off

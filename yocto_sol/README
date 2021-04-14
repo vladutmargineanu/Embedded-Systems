@@ -1,0 +1,24 @@
+Prerequisites
+-get yocto sources (tested with commit b8631416f12b8a904ce3deb036f9d5ce632937b0)
+ -run 'git clone git://git.yoctoproject.org/poky'
+ -change directory to '<poky-path>'
+ -run 'git checkout b8631416f12b8a904ce3deb036f9d5ce632937b0'
+-get raspberrypi yocto layer (tested with commit 6c6f44136f7e1c97bc45be118a48bd9b1fef1072)
+ -change directory to '<poky-path>'
+ -run 'git clone git://git.yoctoproject.org/meta-raspberrypi'
+ -change directory to '<poky-path>/meta-raspberrypi'
+ -run 'git checkout 6c6f44136f7e1c97bc45be118a48bd9b1fef1072'
+-prepare to build
+ -run 'source <poky-path>/oe-init-build-env <build-path>'
+ -add the following line to '<build-path>/conf/local.conf'
+    MACHINE = "raspberrypi"
+ -optionally add the following lines to '<build-path>/conf/local.conf'
+    BB_NUMBER_THREADS = "4"
+    PARALLEL_MAKE = "-j5"
+ -add the raspberrypi layer path '<poky-path>/meta-raspberrypi' to 'BBLAYERS' variable in '<build-path/conf/bblayers.conf'
+-build
+ -run 'bitbake rpi-basic-image' in same terminal as 'source ...'
+ -watch a movie or two
+-get compatible kernel
+ -run 'wget http://cs.curs.pub.ro/wiki/si/_media/lab/2014/yocto/kernel.zip'
+ -extract kernel image with 'unzip kernel.zip'

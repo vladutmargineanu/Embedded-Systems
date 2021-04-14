@@ -1,0 +1,19 @@
+Prequisites
+-ARM toolchain is available in PATH with prefix 'arm-linux-gnueabihf-'
+-sources and configuration for kernel running on target are available
+-edit 'Makefile' to point 'KDIR' to your compiled kernel source directory
+
+Solution
+-run 'make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-'
+-copy led_act.ko to target
+-run on target as root 'insmod led_act.ko'
+-run on target 'cat /proc/devices | grep led_act' and note the major number
+-run on target 'mknod /dev/led_act c <major> 0'
+
+Testing
+-LED should be off
+-running on target as root 'echo 1 > /dev/led_act' turns the LED on
+-running on target as root 'cat /dev/led_act' returns 'on'
+-running on target as root 'echo 0 > /dev/led_act' turns the LED off
+-running on target as root 'cat /dev/led_act' returns 'off'
+

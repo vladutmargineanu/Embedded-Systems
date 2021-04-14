@@ -1,0 +1,9 @@
+Solution
+-copy scripts from ex1 to '/usr/bin'
+-copy solution contents to '/var/www'
+-grant write acces to 'www-data' on leds sysfs
+ -run on target 'sudo chmod a+w /sys/class/leds/led0/trigger'
+ -run on target 'sudo chmod a+w /sys/class/leds/led0/brightness'
+
+Testing
+-point host browser to ip address of target and press buttons

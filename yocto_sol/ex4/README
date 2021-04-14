@@ -1,0 +1,6 @@
+Solution
+-copy 'base-files' to the '<poky-path>/meta-raspberrypi/recipes-core' folder
+
+Testing
+-run 'bitbake rpi-basic-image' in your build folder ('<build-path>') in the same terminal as 'source ...'
+-run generated image from '<build-path>/tmp/deploy/images/raspberrypi/rpi-basic-image-raspberrypi.ext3' in qemu

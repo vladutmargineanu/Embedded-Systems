@@ -1,0 +1,13 @@
+Solution
+-configure internet access as in exercise 3
+-run on target 'sudo apt-get update' to update package database
+-run on target 'apt-cache search php | grep cgi' to find the name of the package
+-run on target 'sudo apt-get install php5-cgi' to install CGI variant of PHP
+-run on target 'ls /etc/lighttpd/conf-available/ | grep php' to find the name of the module
+-run on target 'sudo lighty-enable-mod fastcgi-php' to activate PHP module
+-run on target 'sudo /etc/init.d/lighttpd force-reload' to enable changes
+-copy solution files to '/var/www'
+
+Testing
+-point host browser to <ip address of target>/phpinfo.php
+-point host browser to ip address of target

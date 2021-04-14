@@ -1,0 +1,5 @@
+Solution
+-run 'qemu-system-arm -machine versatilepb -cpu arm1176 -kernel <kernel-path>/zImage -append "root=/dev/sda rw" -hda <build-path>/tmp/deploy/images/raspberrypi/rpi-basic-image-raspberrypi.ext3'
+
+Testing
+-login with username 'root'

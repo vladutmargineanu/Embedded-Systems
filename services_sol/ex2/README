@@ -1,0 +1,10 @@
+Solution
+-copy scripts from ex1 to '/usr/bin'
+-copy 'led' to '/etc/init.d'
+-run on target 'insserv led' to create the startup/shutdown scripts
+
+Testing
+-run on target 'sudo service led start' to turn the led on
+-run on target 'sudo service led stop' to turn the led off
+-run on target 'sudo init 3' to exit runlevel 2 and turn the led off
+-run on target 'sudo init 2' to change to runlevel 2 and turn the led on

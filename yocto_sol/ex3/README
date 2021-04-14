@@ -1,0 +1,8 @@
+Solution
+-copy 'images' to the '<poky-path>/meta-labsi/recipes' folder
+
+Testing
+-run 'bitbake rpi-hello-image' in your build folder ('<build-path>') in the same terminal as 'source ...'
+-run generated image from '<build-path>/tmp/deploy/images/raspberrypi/rpi-hello-image-raspberrypi.ext3' in qemu
+-login with username 'root'
+-run 'hello' on target

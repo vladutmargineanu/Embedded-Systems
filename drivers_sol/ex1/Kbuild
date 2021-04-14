@@ -1,0 +1,3 @@
+ccflags-y := -fno-builtin
+
+obj-m = led_act.o

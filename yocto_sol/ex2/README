@@ -1,0 +1,7 @@
+Solution
+-copy 'meta-labsi' to your poky distribution root folder, '<poky-path>'
+-add the labsi layer path '<poky-path>/meta-labsi' to 'BBLAYERS' variable in your '<build-path>/conf/bblayers.conf'
+
+Testing
+-run 'source <poky-path>/oe-init-build-env <build-path>' if you haven't done it already
+-run 'bitbake hello' in your build folder ('<build-path>') in the same terminal as 'source ...'

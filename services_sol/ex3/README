@@ -1,0 +1,11 @@
+Solution
+-configure internet access on target using parameters from host: network, network mask, default route and dns server
+ -configure random (unused) ip address from host network with same netmask on target subinterface using 'sudo ifconfig eth0:1 <...>'
+ -configure same default route used by host using 'sudo route add default gw <gateway address>'
+ -configure same dns server by editing '/etc/resolv.conf'
+-run on target 'sudo apt-get install lighttpd'
+-on host point browser to ip address of target
+-run on target 'sudo lighty-enable-mod cgi' to activate cgi scripts
+-run on target 'sudo /etc/init.d/lighttpd force-reload' to enable changes
+-run on target 'sudo netstat -tlnp | grep 80' to find http server process and PID
+-run on target 'sudo ps ax -f | grep lighttpd' to find username used by http server
